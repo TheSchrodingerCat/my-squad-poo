@@ -17,18 +17,10 @@ lista[5] = new MiembroSquad("Francisca","Ojeda",28,"rollerderby");
 lista[6] = new MiembroSquad("Valentina","Saavedra",26,"medicina autogestiva");
 lista[7] = new MiembroSquad("Marion","Castillo",29,"caminar");
 
-/*var miembros = document.getElementById("miembro" + (1).toString());
-	miembros.innerHTML = ("<b>Nombre: </b>" + m1.nombre + "<br><b>Apellido: </b>" + m1.apellido + 
-	"<br><b>Edad: </b>" + m1.edad + "<br><b>Hobbie: </b>" + m1.hobbies);*/
-
-
-
-for (i=0 ; i<8 ; i++){
-	var miembros = document.getElementById("miembro" + (i).toString());
-	miembros.innerHTML = ("<b>Nombre: </b>" + lista[i].nombre + "<br><b>Apellido: </b>" + lista[i].apellido + 
-	"<br><b>Edad: </b>" + lista[i].edad + "<br><b>Hobbie: </b>" + lista[i].hobbies);
-}
-
-
+lista.forEach(function(element){
+	var miembros = document.getElementById("miembro" + lista.indexOf(element).toString());
+	miembros.innerHTML = ("<b>Nombre: </b>" + element.nombre + "<br><b>Apellido: </b>" + element.apellido + 
+	"<br><b>Edad: </b>" + element.edad + "<br><b>Hobbie: </b>" + element.hobbies);
+});
 
 
