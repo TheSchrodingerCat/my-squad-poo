@@ -7,19 +7,28 @@ function MiembroSquad(nombre,apellido,edad,hobbies){
 	this.hobbies = hobbies;
 }
 
-var
-var cami = new MiembroSquad("Camila","Saez",24,"ver pinterest");
-var anto = new MiembroSquad("Antonia","Cerda",23,"diseñar");
-var caro = new MiembroSquad("Carolina","Tapia",27,"trekking");
-var cote1 = new MiembroSquad("María José","Rodriguez",32,"ver series");
-var cote2 = new MiembroSquad("María José","Pozo",31,"bailar");
-var fran = new MiembroSquad("Francisca","Ojeda",28,"rollerderby");
-var val = new MiembroSquad("Valentina","Saavedra",26,"medicina autogestiva");
-var marion = new MiembroSquad("Marion","Castillo",29,"caminar");
+var lista = new Array(8);
+lista[0] = new MiembroSquad("Camila","Saez",24,"ver pinterest");
+lista[1] = new MiembroSquad("Antonia","Cerda",23,"diseñar");
+lista[2] = new MiembroSquad("Carolina","Tapia",27,"trekking");
+lista[3] = new MiembroSquad("María José","Rodriguez",32,"ver series");
+lista[4] = new MiembroSquad("María José","Pozo",31,"bailar");
+lista[5] = new MiembroSquad("Francisca","Ojeda",28,"rollerderby");
+lista[6] = new MiembroSquad("Valentina","Saavedra",26,"medicina autogestiva");
+lista[7] = new MiembroSquad("Marion","Castillo",29,"caminar");
 
-for (i=1 ; i<=8 ; i++){
-	member + i = document.getElementById("miembro" + i.toString());
-	(member + i).innerHTML = "<b>Nombre: <\b>" + cami.nombre + "<br><b>Apellido: <\b>" + cami.apellido + 
-	"<br><b>Edad: <\b>" + cami.edad + "<br><b>Hobbie: <\b>" + cami.hobbies;
+/*var miembros = document.getElementById("miembro" + (1).toString());
+	miembros.innerHTML = ("<b>Nombre: </b>" + m1.nombre + "<br><b>Apellido: </b>" + m1.apellido + 
+	"<br><b>Edad: </b>" + m1.edad + "<br><b>Hobbie: </b>" + m1.hobbies);*/
 
+
+
+for (i=0 ; i<8 ; i++){
+	var miembros = document.getElementById("miembro" + (i).toString());
+	miembros.innerHTML = ("<b>Nombre: </b>" + lista[i].nombre + "<br><b>Apellido: </b>" + lista[i].apellido + 
+	"<br><b>Edad: </b>" + lista[i].edad + "<br><b>Hobbie: </b>" + lista[i].hobbies);
 }
+
+
+
+
